@@ -16,7 +16,7 @@ describe('Buscar o Livro', () => {
     });
   });
 // Caso de Teste 02: Verificar os Detalhes do Livro
-describe(' Verificar os Detalhes do Livro', () => {
+describe('Verificar os Detalhes do Livro', () => {
   it('Deve verificar se os detalhes do livro estão corretos', () => {
     cy.viewport(1440, 900);
 
