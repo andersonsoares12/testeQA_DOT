@@ -43,7 +43,9 @@ Este projeto contém testes automatizados usando Cypress para validar a compra d
     npm install mochawesome-merge --save-dev
     npm install mochawesome-report-generator --save-dev
     npm i -D cypress-mochawesome-reporter cypress-multi-reporters mocha-junit-reporter
+  
     ```
+    * comando para rodar o relatorio: cypress run --browser chrome
 
    
 ## para gerar o relatorio deve ser configurado o  cypress.config.js dessa forma*

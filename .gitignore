@@ -15,4 +15,5 @@ cypress/reports/
 
 # Ignorar pasta de saída do Cypress
 cypress/screenshots/
+cypress/reports/
 cypress/videos/
