@@ -1,4 +1,4 @@
-# testeQA_DOT
+# testeQA_DOT_cypress
 PROVA PARA QA &amp; AUTOMAÇÃO DE TESTES DOT
 
 # Projeto Cypress para Teste de Compra de Livro na Amazon
