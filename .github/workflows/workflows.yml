@@ -1,22 +1,38 @@
 name: Teste de Integração Contínua com Cypress
 
-on: [push, pull_request]
+on: push    # Execute este fluxo de trabalho sempre que um novo commit for enviado ou pull request for aberto.
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    cypress-run:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout do código
+              uses: actions/checkout@v4
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+            - name: Configurar Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '16'
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+            - name: Instalar dependências
+              run: npm install
 
-    - name: Install dependencies
-      run: npm install
+            - name: Executar testes Cypress
+              uses: cypress-io/github-action@v6
+              with:
+                build: npm run build
 
-    - name: Run tests
-      run: npm test
+            - name: Upload de screenshots
+              if: failure()
+              uses: actions/upload-artifact@v4
+              with:
+                name: cypress-screenshots
+                path: cypress/screenshots
+                if-no-files-found: ignore
+
+            - name: Upload de vídeos
+              uses: actions/upload-artifact@v4
+              with:
+                name: cypress-videos
+                path: cypress/videos
+                if-no-files-found: ignore
