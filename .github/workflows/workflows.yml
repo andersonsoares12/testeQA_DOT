@@ -17,10 +17,11 @@ jobs:
             - name: Instalar dependências
               run: npm install
 
+            - name: Build do projeto
+              run: npm run build
+
             - name: Executar testes Cypress
-              uses: cypress-io/github-action@v6
-              with:
-                build: npm run build
+              run: npx cypress run
 
             - name: Upload de screenshots
               if: failure()
