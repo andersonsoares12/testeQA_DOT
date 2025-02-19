@@ -1,0 +1,30 @@
+{
+  "name": "testeqa_dot",
+  "version": "1.0.0",
+  "description": "PROVA PARA QA &amp; AUTOMAÇÃO DE TESTES DOT, projeto cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonsoares12/testeQA_DOT.git"
+  },
+  "keywords": [],
+  "author": "Anderson Soares",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/andersonsoares12/testeQA_DOT/issues"
+  },
+  "homepage": "https://github.com/andersonsoares12/testeQA_DOT#readme",
+  "devDependencies": {
+    "cypress": "^14.0.3",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^2.0.5",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
